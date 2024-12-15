@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleDEX - Maitén Klaus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>  
+    <div class="container">
+        <h1>SimpleDEX</h1>
+
+        <button id="connectButton" onclick="connectWallet()">Conectar Wallet</button>
+        <button id="disconnectButton" style="display:none;" onclick="disconnectWallet()">Desconectar Wallet</button>
+        <p id="walletAddress" style="display:none;"></p>
+
+        <div id="liquiditySection" style="display:none;" class="form-group">
+            <h2>Agregar Liquidez</h2>
+            <input type="text" id="amountA" placeholder="Cantidad de Token A">
+            <input type="text" id="amountB" placeholder="Cantidad de Token B">
+            <button onclick="approveLiquidity()">Aprobar Tokens</button>
+            <button onclick="addLiquidity()">Agregar Liquidez</button>
+        </div>
+
+        <div id="removeLiquiditySection" style="display:none;" class="form-group">
+            <h2>Retirar Liquidez</h2>
+            <input type="text" id="liquidityAmount" placeholder="Cantidad a Retirar">
+            <button onclick="removeLiquidity()">Retirar Liquidez</button>
+        </div>
+
+        <div id="swapSection" style="display:none;" class="form-group">
+            <h2>Intercambiar Token A por B</h2>
+            <input type="text" id="swapAmountA" placeholder="Cantidad de Token A">
+            <button onclick="swapAToB()">Intercambiar</button>
+        </div>
+
+        <div class="form-group">
+            <h2>Intercambiar Token B por A</h2>
+            <input type="text" id="swapAmountB" placeholder="Cantidad de Token B">
+            <button onclick="swapBToA()">Intercambiar</button>
+        </div>
+
+        <div class="form-group">
+            <h2>Obtener Precio</h2>
+            <input type="text" id="tokenAddress" placeholder="Dirección del Token">
+            <button onclick="getPrice()">Obtener Precio</button>
+            <p id="priceDisplay"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.0.0/dist/ethers.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

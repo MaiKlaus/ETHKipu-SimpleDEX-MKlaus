@@ -1,0 +1,77 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f0ff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #4c3588; 
+}
+
+h2 {
+    color: #4f349e;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #543c9c;
+    padding-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #d1c4e9;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #826ec0;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background: #7a69ad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #553c99;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#priceDisplay {
+    font-size: 1.2em;
+    color: #5e4b8d;
+    font-weight: bold;
+    text-align: center;
+}
